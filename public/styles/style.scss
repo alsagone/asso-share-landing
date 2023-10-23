@@ -1,0 +1,87 @@
+@import "fonts.css";
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans&display=swap");
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  font-family: "Supertea";
+  background: #fff;
+  color: #000;
+}
+
+.titre {
+  font-size: 30px;
+}
+
+.sous-titre {
+  font-size: 20px;
+}
+
+.flex {
+  display: flex;
+
+  &.col {
+    flex-direction: column;
+  }
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.temoignage-container {
+  justify-content: space-around;
+  align-items: center;
+}
+.temoignage {
+  img {
+    width: 175px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .prenom {
+    color: #000;
+
+    font-family: Supertea;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .accroche {
+    color: #000;
+
+    font-family: Spline Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .decla {
+    border-radius: 20px;
+    border: 6px solid #8e76ae;
+
+    background: #fff;
+    color: #000;
+    width: min-content;
+    height: 200px;
+    box-shadow: 10px 13px 42px -6px rgba(26, 26, 26, 0.25);
+  }
+  .texte-temoignage {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
