@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Supertea";
+  src: url("~/assets/fonts/Supertea.woff2") format("woff2"),
+    url("~/assets/fonts/Supertea.woff") format("woff"),
+    url("~/assets/fonts/Supertea.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KG Miss Kindy Marker";
+  src: url("~/assets/fonts/KGMissKindyMarker.woff2") format("woff2"),
+    url("~/assets/fonts/KGMissKindyMarker.woff") format("woff"),
+    url("~/assets/fonts/KGMissKindyMarker.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KG Miss Kindy Chunky";
+  src: url("~/assets/fonts/KGMissKindyChunky.woff2") format("woff2"),
+    url("~/assets/fonts/KGMissKindyChunky.woff") format("woff"),
+    url("~/assets/fonts/KGMissKindyChunky.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KG Miss Kindy Bubble";
+  src: url("~/assets/fonts/KGMissKindyBubble.woff2") format("woff2"),
+    url("~/assets/fonts/KGMissKindyBubble.woff") format("woff"),
+    url("~/assets/fonts/KGMissKindyBubble.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
