@@ -21,7 +21,9 @@
           <v-toolbar-side-icon @click="sidebar = !sidebar">
           </v-toolbar-side-icon>
         </span>
-        <v-toolbar-title><img id="logo" src="logo.png" /></v-toolbar-title>
+        <v-toolbar-title
+          ><img id="logo" src="~/assets/logo.png"
+        /></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-xs-only">
           <span
@@ -42,7 +44,7 @@
       <div id="accroche" class="flex col center">
         <span class="titre">Asso Share</span>
         <span class="sous-titre">La solidarité à portée de clic !</span>
-        <img id="figures" src="figures.jpg" />
+        <img id="figures" src="~/assets/figures.jpg" />
       </div>
 
       <section id="fonctionnement" class="flex col center">
@@ -63,7 +65,7 @@
             eget. Donec eleifend quam leo, at dignissim libero ultrices sit
             amet.
           </p>
-          <img class="illustration" src="don.png" />
+          <img class="illustration" src="~/assets/don.png" />
         </div>
         <!--
         <div
@@ -84,7 +86,7 @@
         <span class="titre">C'est quoi Asso Share ?</span>
 
         <div class="flex row v-center">
-          <img class="illustration" src="gens.png" />
+          <img class="illustration" src="~/assets/gens.png" />
           <div class="flex col v-center">
             <p>
               Phasellus quam arcu, rutrum nec orci eget, laoreet convallis est.
@@ -173,6 +175,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Lisa from "~/assets/lisa.png";
+import Marie from "~/assets/marie.png";
+import Bernard from "~/assets/bernard.png";
+import quatreEtoiles from "~/assets/4_etoiles.png";
+import cinqEtoiles from "~/assets/5_etoiles.png";
 
 export default defineComponent({
   setup() {
@@ -202,24 +209,24 @@ export default defineComponent({
       temoignages: [
         {
           prenom: "Lisa - bénévole",
-          image: "lisa.png",
+          image: Lisa,
           accroche: "Ça n'a jamais été aussi simple d'aider !",
           declaration: "Lorem Ipsum ceci est un témoignage",
-          imageNote: "4_etoiles.png",
+          imageNote: quatreEtoiles,
         },
         {
           prenom: "Marie - participante",
-          image: "marie.png",
+          image: Marie,
           accroche: "Je découvre de nouvelles associations !",
           declaration: "Lorem Ipsum ceci est un témoignage",
-          imageNote: "5_etoiles.png",
+          imageNote: cinqEtoiles,
         },
         {
           prenom: "Bernard - association",
-          image: "bernard.png",
+          image: Bernard,
           accroche: "Une jolie façon de motiver les gens à agir.",
           declaration: "Lorem Ipsum ceci est un témoignage",
-          imageNote: "4_etoiles.png",
+          imageNote: quatreEtoiles,
         },
       ],
       sidebar: false,
