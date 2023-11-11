@@ -1,0 +1,19 @@
+build nuxt:
+  stage: build
+  image: node:20-alpine
+  before_script:
+    - npm install
+  script:
+    - npm run generate
+    - cp -r dist/* public/
+  artifacts:
+    paths:
+      - public/
+pages:
+  stage: deploy
+  image: alpine
+  script:
+    - echo "gitlab pages deployed"
+  artifacts:
+    paths:
+      - public/

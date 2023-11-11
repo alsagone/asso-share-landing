@@ -21,10 +21,14 @@
           <v-toolbar-side-icon @click="sidebar = !sidebar">
           </v-toolbar-side-icon>
         </span>
-        <v-toolbar-title> Asso Share </v-toolbar-title>
+        <v-toolbar-title><img id="logo" src="logo.png" /></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-xs-only">
-          <span v-for="item in menuItems" :key="item.title">
+          <span
+            class="flex v-center"
+            v-for="item in menuItems"
+            :key="item.title"
+          >
             <a :href="item.path">
               <v-btn flat>
                 <v-icon left dark>{{ item.icon }}</v-icon>
@@ -38,58 +42,130 @@
       <div id="accroche" class="flex col center">
         <span class="titre">Asso Share</span>
         <span class="sous-titre">La solidarité à portée de clic !</span>
+        <img id="figures" src="figures.jpg" />
       </div>
 
-      <section id="fonctionnement" class="flex center">
-        <span class="titre">C'est quoi Asso Share ?</span>
+      <section id="fonctionnement" class="flex col center">
+        <span class="titre">LOREM IPSUM !!</span>
 
-        <div class="flex row">
-          <img src="" />
+        <div class="flex row v-center">
           <p>
             Asso Share est une app qui facilite la rencontre entre les
-            associations et les bénévoles pour des missions ponctuelles!
-            Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là,
-            mais la majeure partie d'entre elles a été altérée par l'addition
-            d'humour ou de mots aléatoires qui ne ressemblent pas une seconde à
-            du texte standard. Si vous voulez utiliser un passage du Lorem
-            Ipsum, vous devez être sûr qu'il n'y a rien d'embarrassant caché
-            dans le texte.
+            associations et les bénévoles pour des missions ponctuelles! Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio ante,
+            efficitur ac augue non, tempor vestibulum diam. Sed laoreet justo
+            sit amet viverra lacinia. Quisque ultricies iaculis consequat.
+            Vivamus aliquam sem sed elit egestas accumsan. In id ex odio. Donec
+            sit amet urna sed ligula porttitor sodales placerat eu dui. Praesent
+            eu massa sapien. Sed tincidunt lorem a mollis iaculis. In ac urna
+            sollicitudin, lobortis lacus sit amet, tincidunt massa. Integer et
+            aliquet lorem. Vestibulum dictum congue enim, in tempor orci laoreet
+            eget. Donec eleifend quam leo, at dignissim libero ultrices sit
+            amet.
           </p>
+          <img class="illustration" src="don.png" />
         </div>
-      </section>
-
-      <section
-        id="credos"
-        class="flex col center"
-        v-for="credo in listeCredos"
-        :key="credo.titre"
-      >
-        <div class="credo flex col center">
+        <!--
+        <div
+          class="credo flex col center"
+          id="credos"
+          v-for="credo in listeCredos"
+          :key="credo.titre"
+        >
           <span class="credo-titre">{{ credo.titre }}</span>
           <span class="description">{{ credo.description }}</span>
         </div>
+        -->
       </section>
 
-      <section id="temoignages">
+      <v-divider />
+
+      <section id="fonctionnement" class="flex col center">
+        <span class="titre">C'est quoi Asso Share ?</span>
+
+        <div class="flex row v-center">
+          <img class="illustration" src="gens.png" />
+          <div class="flex col v-center">
+            <p>
+              Phasellus quam arcu, rutrum nec orci eget, laoreet convallis est.
+              Maecenas tempus mollis orci sit amet eleifend. Pellentesque et
+              orci mi. Curabitur pellentesque, mi dapibus venenatis consectetur,
+              diam turpis viverra velit, et hendrerit orci enim non ipsum.
+              Mauris et urna fringilla, suscipit arcu nec, laoreet orci. Quisque
+              accumsan dolor id rutrum aliquam. Integer at justo odio. Cras ac
+              suscipit erat. Morbi et libero quis nulla tempor posuere.
+              Vestibulum mi diam, finibus ac felis eu, laoreet elementum odio.
+              Suspendisse sit amet tortor viverra, suscipit diam a, varius
+              ligula. Pellentesque placerat ultricies dictum. Curabitur ante
+              ipsum, eleifend a orci non, mollis cursus lacus.
+            </p>
+
+            <p id="slogan">
+              Pour ceux qui veulent aider, fédérer ou juste participer !
+            </p>
+            <a id="lien-inscription" href="#" ref="noreferrer norelopener"
+              ><v-btn
+                id="btn-inscription"
+                block
+                rounded="xl"
+                size="x-large"
+                color="#8e76ae"
+                >Je m'inscris !</v-btn
+              ></a
+            >
+          </div>
+        </div>
+        <!--
+        <div
+          class="credo flex col center"
+          id="credos"
+          v-for="credo in listeCredos"
+          :key="credo.titre"
+        >
+          <span class="credo-titre">{{ credo.titre }}</span>
+          <span class="description">{{ credo.description }}</span>
+        </div>
+        -->
+      </section>
+
+      <v-divider />
+
+      <section id="faq" class="flex col center">
+        <span class="titre">FAQ</span>
+        <v-select
+          v-model="reponse"
+          :items="faq"
+          item-title="question"
+          item-value="reponse"
+          label="Question"
+        ></v-select>
+
+        <p>{{ reponse }}</p>
+      </section>
+
+      <v-divider />
+
+      <section id="temoignages" class="flex col center">
         <span class="titre">Nos utilisateurs témoignent !</span>
         <div class="temoignage-container flex row">
           <div
-            class="temoignage flex col"
+            class="temoignage flex col center"
             v-for="temoignage in temoignages"
             :key="temoignage.prenom"
           >
-            <img :src="temoignage.image" alt="" />
+            <img :src="temoignage.image" class="photo" alt="" />
             <span class="prenom">{{ temoignage.prenom }}</span>
 
-            <div class="decla">
+            <div class="decla flex col v-center">
               <span class="accroche">{{ temoignage.accroche }}</span>
               <span class="texte-temoignage">{{ temoignage.declaration }}</span>
+              <img class="etoiles" :src="temoignage.imageNote" />
             </div>
           </div>
         </div>
       </section>
+      <v-divider />
 
-      <section id="faq"></section>
       <section id="galerie"></section>
     </div>
   </v-app>
@@ -126,21 +202,24 @@ export default defineComponent({
       temoignages: [
         {
           prenom: "Lisa - bénévole",
-          image: "https://placehold.co/175x175/8e76ae/fff?text=Hello+World",
+          image: "lisa.png",
           accroche: "Ça n'a jamais été aussi simple d'aider !",
           declaration: "Lorem Ipsum ceci est un témoignage",
+          imageNote: "4_etoiles.png",
         },
         {
           prenom: "Marie - participante",
-          image: "https://placehold.co/175x175/8e76ae/fff?text=Hello+World",
+          image: "marie.png",
           accroche: "Je découvre de nouvelles associations !",
           declaration: "Lorem Ipsum ceci est un témoignage",
+          imageNote: "5_etoiles.png",
         },
         {
           prenom: "Bernard - association",
-          image: "https://placehold.co/175x175/8e76ae/fff?text=Hello+World",
+          image: "bernard.png",
           accroche: "Une jolie façon de motiver les gens à agir.",
           declaration: "Lorem Ipsum ceci est un témoignage",
+          imageNote: "4_etoiles.png",
         },
       ],
       sidebar: false,
@@ -149,8 +228,27 @@ export default defineComponent({
         { title: "FAQ", path: "#faq", icon: "face" },
         { title: "Galerie", path: "#galerie", icon: "lock_open" },
       ],
+      reponse: "",
+
+      faq: [
+        {
+          question: "Ceci est la question 1",
+          reponse: "Regardez, c'est très simple ! Voici la réponse 1 !",
+        },
+        {
+          question:
+            "Oh j'ai une autre question, je peux en poser une deuxième ?",
+          reponse: "Bien entendu ! Deux questions ne me font pas peur !",
+        },
+        {
+          question: "Une dernière question pour la route.",
+          reponse: "Trois ?! C'est mon nouveau record !",
+        },
+      ],
     };
   },
+
+  methods: {},
 });
 </script>
 

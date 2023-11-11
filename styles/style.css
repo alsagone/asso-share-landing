@@ -1,4 +1,4 @@
-@import "fonts.css";
+@import url(/home/hakim/Desktop/asso-share/styles/fonts.css);
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans&display=swap");
 html {
   height: 100%;
@@ -20,59 +20,137 @@ body {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .flex.col {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .flex.row {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
+
 .flex.center {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex.v-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.v-toolbar {
+  background-color: #8e76ae !important;
+  color: #fff !important;
+}
+
+.v-toolbar #logo {
+  max-height: 55px;
+  width: auto;
+}
+
+.v-toolbar a {
+  height: 100%;
+  color: #fff;
 }
 
 .temoignage-container {
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
 }
 
-.temoignage img {
+.temoignage {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 auto;
+          flex: 2 1 auto;
+}
+
+.temoignage .photo {
   width: 175px;
   height: auto;
   border-radius: 50%;
+  border: 5px solid #8e76ae;
 }
+
 .temoignage .prenom {
   color: #000;
   font-family: Supertea;
-  font-size: 30px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 .temoignage .accroche {
   color: #000;
   font-family: Spline Sans;
-  font-size: 25px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
+
 .temoignage .decla {
   border-radius: 20px;
   border: 6px solid #8e76ae;
   background: #fff;
   color: #000;
-  width: -moz-min-content;
-  width: min-content;
+  width: 90%;
   height: 200px;
-  box-shadow: 10px 13px 42px -6px rgba(26, 26, 26, 0.25);
+  -webkit-box-shadow: 10px 13px 42px -6px rgba(26, 26, 26, 0.25);
+          box-shadow: 10px 13px 42px -6px rgba(26, 26, 26, 0.25);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 5px;
 }
+
 .temoignage .texte-temoignage {
   font-family: "Spline Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}/*# sourceMappingURL=style.css.map */
+}
+
+#figures {
+  width: 100%;
+  height: auto;
+}
+
+.illustration {
+  width: 30%;
+  margin: 10px;
+}
+
+#slogan {
+  font-size: 34px;
+}
+
+.btn-inscription {
+  background-color: #8e76ae;
+  color: #fff;
+}
+
+#lien-inscription {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
